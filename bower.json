@@ -1,0 +1,19 @@
+{
+  "name": "abogados",
+  "version": "1.0.0",
+  "dependencies": {
+    "bourbon": "~4.2.7",
+    "angular": "~1.5.8",
+    "semantic": "semantic-ui#~2.2.2"
+  },
+  "overrides": {
+    "semantic": {
+      "main": [
+        "dist/components/site.min.css",
+        "dist/components/site.min.js",
+        "dist/components/menu.min.css",
+        "dist/components/menu.min.js"
+      ]
+    }
+  }
+}
