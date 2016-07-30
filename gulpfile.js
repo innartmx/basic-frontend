@@ -50,7 +50,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('inject:dependencies', ['sass'], function () {
-    return gulp.src('./app/**/*.html')
+    return gulp.src('./app/index.html')
         .pipe(inject(gulp.src(mainBowerFiles('**/*.js', { read: false })), { name: 'bower', addRootSlash: false }))
         .pipe(inject(gulp.src(mainBowerFiles('**/*.css', { read: false })), { name: 'bower', addRootSlash: false }))
         .pipe(inject(gulp.src('./app/assets/css/*.css', { read: false }), { name: 'site', ignorePath: 'app', addRootSlash: false }))
