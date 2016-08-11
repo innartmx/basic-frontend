@@ -65,7 +65,10 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['clean', 'sass'], function () {
     var time = new Date().getTime();
-    return gulp.src('./app/index.html')
+
+    gulp.src('./app/assets/img/**.*').pipe(gulp.dest('./dist/assets/img'));
+
+    gulp.src('./app/index.html')
         .pipe(inject(
             gulp.src(mainBowerFiles('**/*.js'))
                 .pipe(uglify())

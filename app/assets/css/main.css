@@ -1,4 +1,91 @@
+body {
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.menu-scrolled {
+  position: fixed;
+  z-index: 1;
+  top: -60px;
+  background: rgba(64, 0, 0, 0.95) !important;
+  border-radius: 0 !important;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  transition: all 500ms ease-out; }
+  .menu-scrolled.visible {
+    top: 0;
+    opacity: 1; }
+
 .main-head {
   width: 100%;
-  height: 280px;
-  background: #ccc; }
+  height: 250px;
+  box-shadow: 0 0 7px #808080;
+  background: url(../img/head-bg.png) no-repeat;
+  background-position: left bottom;
+  background-size: cover; }
+  .main-head .logo {
+    width: 130px;
+    margin-top: 90px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2); }
+  .main-head h1 {
+    position: absolute;
+    color: #fff;
+    font-size: 32px;
+    font-weight: lighter;
+    left: 160px;
+    top: 70px; }
+  .main-head .menu-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent !important; }
+
+.main-footer {
+  background: #400000; }
+
+.main-content {
+  margin-top: 60px;
+  padding: 0 10% 30px 10%; }
+  .main-content h1 {
+    text-align: center; }
+  .main-content .services {
+    padding: 32px 0 20px 0; }
+    .main-content .services .video {
+      margin-bottom: 35px; }
+    .main-content .services .desc {
+      padding-left: 35px; }
+      .main-content .services .desc .item .content .description {
+        font-size: 16px; }
+  .main-content .contenido .item {
+    padding: 15px 8px; }
+  .main-content .contenido .macro-tema {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc; }
+    .main-content .contenido .macro-tema .head {
+      padding: 15px 20px;
+      height: 50px;
+      background: #ccc;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      font-size: 20px; }
+    .main-content .contenido .macro-tema .tema {
+      padding: 20px;
+      background: #fafafa;
+      border-bottom: 1px solid #ccc;
+      font-size: 16px;
+      font-weight: bold; }
+      .main-content .contenido .macro-tema .tema:last-child {
+        border-bottom: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+
+@media screen and (min-width: 480px) {
+  .main-head .logo {
+    width: 230px;
+    margin-top: 60px; }
+  .main-head h1 {
+    top: 110px;
+    left: 260px; } }

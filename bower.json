@@ -4,7 +4,8 @@
   "dependencies": {
     "bourbon": "~4.2.7",
     "angular": "~1.5.8",
-    "semantic": "semantic-ui#~2.2.2"
+    "semantic": "semantic-ui#~2.2.2",
+    "flexboxgrid": "~6.3.0"
   },
   "overrides": {
     "semantic": {
@@ -12,8 +13,21 @@
         "dist/components/site.min.css",
         "dist/components/site.min.js",
         "dist/components/menu.min.css",
-        "dist/components/menu.min.js"
+        "dist/components/menu.min.js",
+        "dist/components/card.min.css",
+        "dist/components/card.min.js",
+        "dist/components/button.min.css",
+        "dist/components/button.min.js",
+        "dist/components/image.min.css",
+        "dist/components/embed.min.css",
+        "dist/components/embed.min.js",
+        "dist/components/item.min.css",
+        "dist/components/label.min.css",
+        "dist/components/visibility.min.js"
       ]
+    },
+    "flexboxgrid": {
+      "main": "dist/flexboxgrid.min.css"
     }
   }
 }

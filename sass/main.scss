@@ -1,7 +1,144 @@
-$main-head-color: #ccc;
+@import './bower_components/bourbon/app/assets/stylesheets/_bourbon';
+
+$main-color: #400000;
+$secondary-color: #ccc;
+$menu-height: 40px;
+
+body{
+    background: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.menu-scrolled{
+    position: fixed;
+    z-index: 1;
+    top: -60px;
+    background: rgba($main-color, 0.95) !important;
+    border-radius: 0 !important;
+    width: 100%;
+    opacity: 0;
+    @include transition(all 500ms ease-out);
+
+    &.visible{
+        top: 0;
+        opacity: 1;
+    }
+}
 
 .main-head{
     width: 100%;
-    height: 280px;
-    background: $main-head-color;
+    height: 250px;
+    box-shadow: 0 0 7px #808080;
+    background: url(../img/head-bg.png) no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+
+    .logo{
+        width: 130px;
+        margin-top: 90px;
+        border-right: 1px solid rgba(#fff, 0.2);
+    }
+
+    h1{
+        position: absolute;        
+        color: #fff;
+        font-size: 32px;
+        font-weight: lighter;
+        left: 160px;
+        top: 70px;
+    }   
+
+    .menu-top{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: transparent !important;
+    }
+}
+
+.main-footer{
+    background: $main-color;
+}
+
+.main-content{
+    margin-top: 60px;
+    padding: 0 10% 30px 10%;
+
+    h1{
+        text-align: center;
+    } 
+
+    .services{
+        padding: 32px 0 20px 0;    
+
+        .video{
+            margin-bottom: 35px;
+        }
+
+        .desc{
+            padding-left: 35px;
+
+            .item{
+                .content{
+                    .description{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }   
+    }
+
+    .contenido{
+        $contenido-border-color: $secondary-color;
+
+        .item{
+            padding: 15px 8px;
+        }
+
+        .macro-tema{
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid $contenido-border-color;
+
+            .head{
+                padding: 15px 20px;
+                height: 50px;
+                background: $contenido-border-color;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                font-size: 20px;
+            }
+
+            .tema{
+                padding: 20px;
+                background: #fafafa;
+                border-bottom: 1px solid $contenido-border-color;
+                font-size: 16px;
+                font-weight: bold;
+                
+                &:last-child{
+                    border-bottom: 0;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+
+        }
+               
+    }
+}
+
+
+@media screen and (min-width: 480px) {
+    .main-head{
+        .logo{
+            width: 230px;
+            margin-top: 60px;
+        }
+        h1{
+            top: 110px;
+            left: 260px;
+        }
+    }
 }
